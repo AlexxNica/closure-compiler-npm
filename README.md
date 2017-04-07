@@ -1,20 +1,20 @@
 # google-closure-compiler
 [![Build Status](https://travis-ci.org/google/closure-compiler-npm.svg?branch=master)](https://travis-ci.org/google/closure-compiler-npm) [![npm version](https://badge.fury.io/js/google-closure-compiler.svg)](https://badge.fury.io/js/google-closure-compiler)
 
-Check, compile, optimize and compress Javascript with Closure-Compiler
+Check, compile, optimize and compress JavaScript with Closure-Compiler.
 
-This repository tracks issues related to the publication to npmjs.org and associated plugins.
+This repository tracks issues related to the publication of npmjs.com package and associated plugins.
 Any bugs not related to the plugins themselves should be reported to the
 [main repository](https://github.com/google/closure-compiler/).
 
 ## Getting Started
-*This package requires java to be installed and in the path.* Looking for a version that
-does not require java? See [google-closure-compiler-js](https://github.com/google/closure-compiler-js).
+*This package requires Java to be installed and in the path.* Looking for a version that
+does not require Java? Take a look at [google-closure-compiler-js](https://github.com/google/closure-compiler-js), the JavaScript port.
 
 If you are new to [Closure-Compiler](https://developers.google.com/closure/compiler/), make
 sure to read and understand the
 [compilation levels](https://developers.google.com/closure/compiler/docs/compilation_levels) as
-the compiler works very differently depending on the compilation level selected.
+the compiler works very differently depending on selected level.
 
 For help or questions with the compiler, the best resource is
 [Stack Overflow](http://stackoverflow.com/questions/tagged/google-closure-compiler). Posts there
@@ -47,10 +47,11 @@ java -jar compiler.jar --help
 
 ### Specifying Options
 
-Both the grunt and gulp tasks take options objects. The option parameters map directly to the
-compiler flags without the leading '--' characters.
+- Both Grunt and Gulp tasks take options objects.
+- Options parameters map directly to the compiler flags without the `--` preceded characters.
 
-Values are either strings or booleans. Options which have multiple values can be arrays.
+- Values are either strings or booleans.
+- Arrays can be used for options having multiple values.
 
 ```js
   {
