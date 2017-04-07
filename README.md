@@ -57,7 +57,7 @@ java -jar compiler.jar --help
 ```
 
 An array of strings can be used to specify your options if advanced usage is needed.
-In this case, options keys *must* be preceded by `--` and the compiler processes them in the specified order (left to right, top to bottom).
+In this case, options keys *must* be preceded by `--`, and the compiler processes them in the specified order (left to right, top to bottom).
 
 ```js
   [
@@ -91,8 +91,7 @@ require('google-closure-compiler').grunt(grunt);
 // The load-grunt-tasks plugin won't automatically load closure-compiler
 ```
 
-Task targets, files and options may be specified according to the grunt
-[Configuring Tasks Guide](http://gruntjs.com/configuring-tasks).
+Options, files, and task targets may be specified according to Grunt's [Configuring Tasks Guide](http://gruntjs.com/configuring-tasks).
 
 ### Basic Configuration Example:
 
@@ -169,9 +168,9 @@ grunt.initConfig({
 
 ## Using the Gulp Plugin
 
-The gulp plugin supports piping multiple files through the compiler.
+The Gulp plugin supports piping multiple files through the compiler.
 
-Options are a direct match to the compiler flags without the leading "--".
+Options are a direct match to the compiler flags without the preceding "--".
 
 ### Basic Configuration Example:
 
@@ -218,9 +217,7 @@ gulp.task('js-compile', function () {
 ```
 
 ### gulp.src base option
-Gulp attempts to set the base of a glob from the point of the first wildcard. This isn't always
-what is desired. Users can specify the { base: 'path' } option to `gulp.src` calls to override
-this behavior.
+Gulp attempts to set the base of a glob from the point of the first wildcard, but this is not always what you desire. To override this behavior, you can set a specific base path to `gulp.src` using the `{base: 'path'}` option.
 
 ### Advanced Usage with Arguments Array:
 
@@ -241,7 +238,7 @@ gulp.task('js-compile', function () {
 ```
 
 ### Gulp Source Maps
-The Gulp plugin also supports gulp-sourcemaps.
+The Gulp plugin also gives support to gulp-sourcemaps.
 
 ```js
 var closureCompiler = require('google-closure-compiler').gulp();
@@ -263,9 +260,9 @@ gulp.task('js-compile', function () {
 });
 ```
 
-## Specifying Extra Java Arguments
-Some users may wish to pass the java vm extra arguments - such as to specify the amount of memory the compiler should
-be allocated. Both the grunt and gulp plugins support this.
+## Specifying Additional Java Arguments
+Some users may wish to pass additional arguments to the Java VM, such as to specify the amount of memory the compiler should be allocating.
+Both the Grunt and Gulp plugins support this:
 
 ### Grunt
 ```js
