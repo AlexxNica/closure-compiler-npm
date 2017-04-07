@@ -240,8 +240,8 @@ gulp.task('js-compile', function () {
 });
 ```
 
-### Gulp Sourcemaps
-The gulp plugin supports gulp sourcemaps.
+### Gulp Source Maps
+The Gulp plugin also supports gulp-sourcemaps.
 
 ```js
 var closureCompiler = require('google-closure-compiler').gulp();
