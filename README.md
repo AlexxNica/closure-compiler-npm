@@ -56,8 +56,8 @@ java -jar compiler.jar --help
   }
 ```
 
-For advanced usages, the options may be specified as an array of strings. These values _include_
-the "--" characters and are directly passed to the compiler in the order specified:
+An array of strings can be used to specify your options if advanced usage is needed.
+In this case, options keys *must* be preceded by `--` and the compiler processes them in the specified order (left to right, top to bottom).
 
 ```js
   [
