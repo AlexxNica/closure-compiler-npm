@@ -11,13 +11,9 @@ Any bugs not related to the plugins themselves should be reported to the
 *This package requires Java to be installed and in the path.* Looking for a version that
 does not require Java? Take a look at [google-closure-compiler-js](https://github.com/google/closure-compiler-js), the JavaScript port.
 
-If you are new to [Closure-Compiler](https://developers.google.com/closure/compiler/), make
-sure to read and understand the
-[compilation levels](https://developers.google.com/closure/compiler/docs/compilation_levels) as
-the compiler works very differently depending on selected level.
+If you are new to [Closure-Compiler](https://developers.google.com/closure/compiler/), make sure to read and understand the [compilation levels](https://developers.google.com/closure/compiler/docs/compilation_levels) as the compiler works very differently depending on selected level.
 
-For help or questions with the compiler, the best resource is
-[Stack Overflow](http://stackoverflow.com/questions/tagged/google-closure-compiler). Posts there
+For help or questions with the compiler, the best resource is [Stack Overflow](http://stackoverflow.com/questions/tagged/google-closure-compiler). Posts there
 are monitored by multiple Closure Compiler team members.
 
 You may also post in the
@@ -26,7 +22,7 @@ You may also post in the
 *Please don't cross post to both Stackoverflow and Closure Compiler Discuss.*
 
 ## Usage
-The compiler package now includes build tool plugins for [Grunt](http://gruntjs.com/) and
+The compiler package now includes building tool plugins for [Grunt](http://gruntjs.com/) and
 [Gulp](http://gulpjs.com/).
 
 ### Installation
@@ -75,11 +71,9 @@ the "--" characters and are directly passed to the compiler in the order specifi
   ]
 ```
 
-When an array of flags is passed, the input files should not be specified via the build tools, but
-rather as compilation flags directly.
+- Input files should not be specified via build tools when passing an array of option flags. Instead, you should use compilation flags as you would, directly.
 
-Some shells (particularly windows) try to do expansion on globs rather than passing the string on
-to the compiler. To prevent this it is necessary to quote certain arguments:
+Some shells (Windows, in particular) try to do an expansion on globs rather than passing the string on to the compiler. It is necessary to quote certain arguments to prevent this:
 
 ```js
   {
@@ -100,7 +94,7 @@ require('google-closure-compiler').grunt(grunt);
 ```
 
 Task targets, files and options may be specified according to the grunt
-[Configuring tasks](http://gruntjs.com/configuring-tasks) guide.
+[Configuring Tasks Guide](http://gruntjs.com/configuring-tasks).
 
 ### Basic Configuration Example:
 
@@ -201,10 +195,9 @@ gulp.task('js-compile', function () {
 ```
 
 ### Use without gulp.src
-Gulp files are all read into memory, transformed into a JSON stream, and piped through the
-compiler. With large source sets this may require a large amount of memory.
+Gulp files are all read into memory, transformed into a JSON stream, and piped through the compiler. With large source sets, this may demand a significant amount of it [memory].
 
-Closure-compiler can natively expand file globs which will greatly alleviate this issue.
+To alleviate this issue considerably, Closure-Compiler can natively expand file globs like so:
 
 ```js
 var compilerPackage = require('google-closure-compiler');
@@ -308,6 +301,10 @@ var compilerProcess = closureCompiler.run(function(exitCode, stdOut, stdErr) {
 });
 ```
 
+## Version History
+Closure Compiler release notes can be found on the
+[main repository wiki](https://github.com/google/closure-compiler/wiki/Binary-Downloads).
+
 ## License
 Copyright 2015 The Closure Compiler Authors
 
@@ -322,7 +319,3 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
-
-## Version History
-Closure Compiler release notes can be found on the
-[main repository wiki](https://github.com/google/closure-compiler/wiki/Binary-Downloads).
