@@ -9,17 +9,17 @@ Any bugs not related to the plugins themselves should be reported to the
 
 ## Getting Started
 *This package requires Java to be installed and in the path.* Looking for a version that
-does not require Java? Take a look at [google-closure-compiler-js](https://github.com/google/closure-compiler-js), the JavaScript port.
+does not require Java? Take a look at the JavaScript port: [google-closure-compiler-js](https://github.com/google/closure-compiler-js).
 
-If you are new to [Closure-Compiler](https://developers.google.com/closure/compiler/), make sure to read and understand the [compilation levels](https://developers.google.com/closure/compiler/docs/compilation_levels) as the compiler works very differently depending on selected level.
+If you are new to [Closure-Compiler](https://developers.google.com/closure/compiler/), make sure to read and understand the [compilation levels](https://developers.google.com/closure/compiler/docs/compilation_levels), as the compiler works very differently depending on selected level.
 
-For help or questions with the compiler, the best resource is [Stack Overflow](http://stackoverflow.com/questions/tagged/google-closure-compiler). Posts there
+For help or questions about the compiler, your best resource will be [Stack Overflow](http://stackoverflow.com/questions/tagged/google-closure-compiler). Posts there
 are monitored by multiple Closure Compiler team members.
 
 You may also post in the
 [Closure Compiler Discuss Google Group](https://groups.google.com/forum/#!forum/closure-compiler-discuss).
 
-*Please don't cross post to both Stackoverflow and Closure Compiler Discuss.*
+*Please avoid cross-posting to Stack Overflow and Closure Compiler Discuss Google Group.*
 
 ## Usage
 The compiler package now includes building tool plugins for [Grunt](http://gruntjs.com/) and
@@ -33,9 +33,7 @@ npm install --save google-closure-compiler
 
 ### Configuration
 
-The compiler has a large number of flags. The best documentation for the flags can be found by
-running the `--help` command of the compiler.jar found inside the
-`node_modules/google-closure-compiler` folder:
+The compiler has a large number of flags, all of which you can see by running the compiler.jar file (inside `node_modules/google-closure-compiler` folder) with the `--help` command, like so:
 
 ```
 java -jar compiler.jar --help
