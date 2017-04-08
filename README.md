@@ -8,21 +8,21 @@ Any bugs not related to the plugins themselves should be reported to the
 [main repository](https://github.com/google/closure-compiler/).
 
 ## Getting Started
-*This package requires Java to be installed and in the path.* Looking for a version that
-does not require Java? Take a look at the JavaScript port: [google-closure-compiler-js](https://github.com/google/closure-compiler-js).
+*This package requires Java to be installed and in the path.*
+Looking for a version that does not require Java? Take a look at the JavaScript port: [google-closure-compiler-js](https://github.com/google/closure-compiler-js).
 
 If you are new to [Closure-Compiler](https://developers.google.com/closure/compiler/), make sure to read and understand the [compilation levels](https://developers.google.com/closure/compiler/docs/compilation_levels), as the compiler works very differently depending on selected level.
 
-For help or questions about the compiler, your best resource will be [Stack Overflow](http://stackoverflow.com/questions/tagged/google-closure-compiler). Posts there
+If you need help or have questions about the compiler, your best resource will be [Stack Overflow](http://stackoverflow.com/questions/tagged/google-closure-compiler). Posts there
 are monitored by multiple Closure Compiler team members.
 
 You may also post in the
 [Closure Compiler Discuss Google Group](https://groups.google.com/forum/#!forum/closure-compiler-discuss).
 
-*Please avoid cross-posting to Stack Overflow and Closure Compiler Discuss Google Group.*
+*Please avoid cross-posting to Stack Overflow and Closure Compiler Discuss Google Group at the same time.*
 
 ## Usage
-The compiler package now includes building tool plugins for [Grunt](http://gruntjs.com/) and
+The compiler package now includes building tool plugins for both [Grunt](http://gruntjs.com/) and
 [Gulp](http://gulpjs.com/).
 
 ### Installation
@@ -42,9 +42,8 @@ java -jar compiler.jar --help
 ### Specifying Options
 
 - Both Grunt and Gulp tasks take options objects.
-- Options parameters map directly to the compiler flags without the `--` preceded characters.
-
-- Values are either strings or booleans.
+- Options parameters without the preceding `--` characters map directly to the compiler flags.
+- Values must be either strings or booleans.
 - Arrays can be used for options having multiple values.
 
 ```js
@@ -71,7 +70,7 @@ In this case, options keys *must* be preceded by `--`, and the compiler processe
 
 - Input files should not be specified via build tools when passing an array of option flags. Instead, you should use compilation flags as you would, directly.
 
-Some shells (Windows, in particular) try to do an expansion on globs rather than passing the string on to the compiler. It is necessary to quote certain arguments to prevent this:
+Some shells (Windows, in particular) try to do an expansion on globs rather than passing the string on to the compiler. To prevent this, you should quote certain arguments like so:
 
 ```js
   {
