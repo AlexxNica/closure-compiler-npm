@@ -90,7 +90,7 @@ require('google-closure-compiler').grunt(grunt);
 // The load-grunt-tasks plugin won't automatically load closure-compiler
 ```
 
-Options, files, and task targets may be specified according to Grunt's [Configuring Tasks Guide](http://gruntjs.com/configuring-tasks).
+* Options, files, and task targets may be specified according to Grunt's [Configuring Tasks Guide](http://gruntjs.com/configuring-tasks).
 
 ### Basic Configuration Example:
 
@@ -169,7 +169,7 @@ grunt.initConfig({
 
 The Gulp plugin supports piping multiple files through the compiler.
 
-Options are a direct match to the compiler flags without the preceding "--".
+Options without the preceding `--` are a direct match to compiler's flags.
 
 ### Basic Configuration Example:
 
@@ -191,9 +191,9 @@ gulp.task('js-compile', function () {
 ```
 
 ### Use without gulp.src
-Gulp files are all read into memory, transformed into a JSON stream, and piped through the compiler. With large source sets, this may demand a significant amount of it [memory].
+Gulp files are all read into memory, transformed into a JSON stream, and piped through the compiler. With large source sets, this might end demanding a significant amount of it [memory].
 
-To alleviate this issue considerably, Closure-Compiler can natively expand file globs like so:
+To mitigate this issue considerably, Closure-Compiler can natively expand file globs like so:
 
 ```js
 var compilerPackage = require('google-closure-compiler');
