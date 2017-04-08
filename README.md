@@ -3,7 +3,7 @@
 
 Check, compile, optimize and compress JavaScript with Closure-Compiler.
 
-This repository tracks issues related to the publication of npmjs.com package and associated plugins.
+This repository tracks issues related to the publication of the npmjs.com package and associated plugins.
 Any bugs not related to the plugins themselves should be reported to the
 [main repository](https://github.com/google/closure-compiler/).
 
