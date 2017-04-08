@@ -277,8 +277,8 @@ var closureCompiler = require('google-closure-compiler').gulp({
 ```
 
 ## Plugin Authors and Native Node Usage
-A low-level node class is included to facilitate spawning the compiler jar as a process from Node.
-In addition, it exposes a static property with the path to the compiler jar file.
+We include a low-level node class to facilitate spawning compiler jar as a process from Node.
+Along with that, there's also a static property that exposes the path to the compiler jar file.
 
 ```js
 var ClosureCompiler = require('google-closure-compiler').compiler;
@@ -297,11 +297,10 @@ var compilerProcess = closureCompiler.run(function(exitCode, stdOut, stdErr) {
 ```
 
 ## Version History
-Closure Compiler release notes can be found on the
-[main repository wiki](https://github.com/google/closure-compiler/wiki/Binary-Downloads).
+Closure Compiler release notes can be found on the [main repository wiki](https://github.com/google/closure-compiler/wiki/Binary-Downloads).
 
 ## License
-Copyright 2015 The Closure Compiler Authors
+Copyright © 2017 The Closure Compiler Authors
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
