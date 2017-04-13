@@ -9,12 +9,17 @@ Any bugs not related to the plugins themselves should be reported to the
 
 ## Getting Started
 *This package requires Java to be installed and in the path.*
-Looking for a version that does not require Java? Take a look at the JavaScript port: [google-closure-compiler-js](https://github.com/google/closure-compiler-js).
+Looking for a version that does not require Java?
+Take a look at the JavaScript port: [google-closure-compiler-js](https://github.com/google/closure-compiler-js).
 
-If you are new to [Closure-Compiler](https://developers.google.com/closure/compiler/), make sure to read and understand the [compilation levels](https://developers.google.com/closure/compiler/docs/compilation_levels), as the compiler works very differently depending on selected level.
+If you are new to [Closure-Compiler](https://developers.google.com/closure/compiler/),
+make sure to read and understand the
+[compilation levels](https://developers.google.com/closure/compiler/docs/compilation_levels),
+as the compiler works very differently depending on selected level.
 
-If you need help or have questions about the compiler, your best resource will be [Stack Overflow](http://stackoverflow.com/questions/tagged/google-closure-compiler). Posts there
-are monitored by multiple Closure Compiler team members.
+If you need help or have questions about the compiler, your best resource will be
+[Stack Overflow](http://stackoverflow.com/questions/tagged/google-closure-compiler).
+Posts there are monitored by multiple Closure Compiler team members.
 
 You may also post in the
 [Closure Compiler Discuss Google Group](https://groups.google.com/forum/#!forum/closure-compiler-discuss).
@@ -22,8 +27,8 @@ You may also post in the
 *Please avoid cross-posting to Stack Overflow and Closure Compiler Discuss Google Group at the same time.*
 
 ## Usage
-The compiler package now includes building tool plugins for both [Grunt](http://gruntjs.com/) and
-[Gulp](http://gulpjs.com/).
+The compiler package now includes build tool plugins for both
+[Grunt](http://gruntjs.com/) and [Gulp](http://gulpjs.com/).
 
 ### Installation
 
@@ -33,7 +38,9 @@ npm install --save google-closure-compiler
 
 ### Configuration
 
-The compiler has a large number of flags, all of which you can see by running the compiler.jar file (inside `node_modules/google-closure-compiler` folder) with the `--help` command, like so:
+The compiler has a large number of flags, all of which you can see by running the compiler.jar file
+(inside `node_modules/google-closure-compiler` folder)
+with the `--help` command, like so:
 
 ```
 java -jar compiler.jar --help
@@ -68,7 +75,8 @@ In this case, options keys *must* be preceded by `--`, and the compiler processe
   ]
 ```
 
-- Input files should not be specified via build tools when passing an array of option flags. Instead, you should use compilation flags as you would, directly.
+When an array of flags is passed, the input files should not be specified via the build tools,
+but rather as compilation flags directly.
 
 Some shells (Windows, in particular) try to do an expansion on globs rather than passing the string on to the compiler. To prevent this, you should quote certain arguments like so:
 
